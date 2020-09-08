@@ -57,12 +57,23 @@
     z-index: 2;
     height: 600px;
     width: 350px;
-    overflow-y: scroll;
 }
 
 #div1 {
     color: white;
     font-size: 50px;
+}
+#div4 {
+    width:290px;
+    height:320px;
+    position:relative;
+    top: 0px;
+    left:40px;
+    overflow-y:scroll;
+}
+
+#div4 p {
+    font-size:50px;
 }
 
 .settimer {
@@ -134,12 +145,11 @@
 }
 
 #item {
-    padding: 0px;
     overflow-y: scroll;
-    height: 461px;
+    height: 450px;
 }
 
-.slideshow {
+.slider {
     width: 350px;
     height: 600px;
     background-color: crimson;
@@ -248,4 +258,22 @@ table {
 .button7 {
     position:relative;
     top:100px;
+}
+.slideshow {
+    position:relative;
+    left:250px;
+    width: 600px;
+    height: 600px;
+    background-color: #6A5ACD;
+}
+#aaa {
+    height:300px;
+    width:300px;
+}
+#button1 {
+    background-color:violet;
+    position:relative;
+    top:40px;
+    width:100px;
+    height:50px;
 }

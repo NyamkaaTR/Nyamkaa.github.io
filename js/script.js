@@ -97,9 +97,9 @@ function reset() {
 }
 
 function lap() {
-
-    var pe = document.createElement('pe')
-    pe.innerHTML = document.getElementById('div1').innerHTML
+    var p = document.createElement('p')
+    p.innerHTML = document.getElementById('div1').innerHTML
+    document.getElementById('div4').appendChild(p)
 }
 
 function stopwatch() {
@@ -133,21 +133,22 @@ function run(time) {
 }
 var input = document.getElementById('input')
 function click2() {
-    var pee = document.createElement("pee")
-    var button = document.createElement('button');
-    button.style.position = "relative"
-    button.style.marginTop = "0"
-    button.style.marginLeft = "200px"
-    button.style.width = "20px"
-    button.style.height = "20px"
+    let pa = document.createElement("p")
+    let button = document.createElement('button');
+    button.style.position = "absolute"
+    button.style.marginTop = "-37px"
+    button.style.marginLeft = "180px"
     button.innerHTML = "-"
-    pee.innerHTML = input.value
+    button.style.position = "relative"
+    pa.style.position = "relative"
+    pa.style.marginTop = "0"
+    pa.innerHTML = input.value
     button.onclick = function () {
-        pee.style.display = "none"
+        pa.style.display = "none"
         button.style.display = "none"
     }
 
-    document.getElementById('item').append(pee, button)
+    document.getElementById("item").append(pa, button)
 
 }
 
@@ -208,3 +209,27 @@ function start1() {
     document.getElementById("string").innerHTML = (x);
 }
 
+
+var image = document.getElementById("aaa");
+var img_array = ["imgs/billie1.jpg", "imgs/billie2.jpg", "imgs/billie3.jpg", "imgs/billie4.jpg"];
+var index = 0;
+var num = 0
+var q = setInterval(slide, 1000);
+function slide() {
+    image.src = img_array[index];
+    index++;
+    if (index >= img_array.length) {
+        index = 0;
+    }
+}
+setInterval(q);
+function click3() {
+    num++
+    if (num == 1) {
+        clearInterval(q)
+    }
+    else if (num == 2) {
+        q = setInterval(slide, 1000)
+        num = 0
+    }
+}

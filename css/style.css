@@ -38,7 +38,7 @@ header#home {
 }
 
 .navbar {
-    background-color: grey;
+    background-color: orangered;
     position: fixed;
     top: 0;
     left: 0;
@@ -47,6 +47,11 @@ header#home {
     height: 80px;
     z-index: 1000;  
 } 
+navbar:hover {
+    width:80%;
+    height:50px;
+    transistion:all 1s linear;
+}
 
 .navbar ul.navbar-nav li {
     padding: 0 6px;
