@@ -1,4 +1,6 @@
-﻿.login {
+﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.login {
     background-color: yellow;
     height: 600px;
     font-size: 25px;
@@ -131,22 +133,26 @@
 
 #input {
     height: 50px;
-    position: relative;
-    left: -20px;
+    width:280px;
+    position:relative;
+    left: -25px;
     background-color: aquamarine;
 }
 
 #button {
-    height: 50px;
+    height: 55px;
     width: 50px;
     background-color: darkblue;
-    margin-left: 280px;
-    margin-top: -120px;
+    top: -50px;
+    left: 140px;
 }
 
 #item {
+    padding: 0px;
+    background-color: green;
+    width: 350px;
     overflow-y: scroll;
-    height: 450px;
+    height: 449px;
 }
 
 .slider {

@@ -41,6 +41,7 @@ function insert(argument1) {
     var lastChar = myInput.value[myInput.value.length - 1]
 
     if (argument1 == "." && hasDot) {
+
     }
 
 
@@ -88,12 +89,13 @@ function start() {
 
 
 function reset() {
-    minute = 0
-    second = 0
-    doil = 0
-    document.getElementById('div1').innerHTML = "00:00:00"
-    clearInterval(Id)
-    Id = 0
+        minute = 0
+        second = 0
+        doil = 0
+        document.getElementById('div1').innerHTML = "00:00:00"
+        clearInterval(Id)
+    Id = 0;
+    document.getElementById('div4').innerHTML = "";
 }
 
 function lap() {
@@ -131,24 +133,29 @@ function run(time) {
     }
     document.getElementById('display1').innerHTML = (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s)
 }
+
+
 var input = document.getElementById('input')
 function click2() {
-    let pa = document.createElement("p")
-    let button = document.createElement('button');
-    button.style.position = "absolute"
-    button.style.marginTop = "-37px"
-    button.style.marginLeft = "180px"
-    button.innerHTML = "-"
+    var p = document.createElement("p")
+    var button = document.createElement('button');
     button.style.position = "relative"
-    pa.style.position = "relative"
-    pa.style.marginTop = "0"
-    pa.innerHTML = input.value
+    button.style.top = "-78px"
+    button.style.height = "50px"
+    button.style.width = "50px"
+    button.style.left = "100px"
+    button.style.borderRadius = "5px"
+    button.innerHTML = "-"
+    p.innerHTML = input.value
+    p.style.position = "relative"
+    p.style.left = "-120px"
+    p.style.fontSize = "50px"
     button.onclick = function () {
-        pa.style.display = "none"
+        p.style.display = "none"
         button.style.display = "none"
     }
 
-    document.getElementById("item").append(pa, button)
+    document.getElementById("item").append(p, button)
 
 }
 
