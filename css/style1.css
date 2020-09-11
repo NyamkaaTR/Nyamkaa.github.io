@@ -102,13 +102,12 @@
 }
 
 #display1 {
-    position: relative;
-    left: 80px;
+    left: 0px;
     color: aqua;
     font-size: 50px;
     display: block;
-    position: absolute;
     margin: auto;
+    width:200px;
 }
 
 #div3 span {
@@ -140,19 +139,25 @@
 }
 
 #button {
-    height: 55px;
+    height: 50px;
     width: 50px;
     background-color: darkblue;
     top: -50px;
     left: 140px;
+    position:relative;
 }
 
 #item {
     padding: 0px;
     background-color: green;
     width: 350px;
-    overflow-y: scroll;
     height: 449px;
+}
+.items {
+    position:relative;
+    top: -395px;
+    height: 395px;
+    overflow-y : scroll;
 }
 
 .slider {

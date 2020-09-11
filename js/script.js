@@ -32,6 +32,11 @@ function click1() {
                 alert("username буруу")
             }
         }
+        if (username != objPeople[i].username) {
+            if (password != objPeople[i].password) {
+                alert('password or username is incorrect')
+            }
+        }
     }
 }
 var myArray = ["+", "-", "*", "/"]
@@ -39,12 +44,8 @@ var hasDot = false
 var myInput = document.getElementById("myInput")
 function insert(argument1) {
     var lastChar = myInput.value[myInput.value.length - 1]
-
     if (argument1 == "." && hasDot) {
-
     }
-
-
     else if (myArray.includes(argument1)) {
         if (myArray.includes(lastChar)) {
         }
@@ -140,23 +141,25 @@ function click2() {
     var p = document.createElement("p")
     var button = document.createElement('button');
     button.style.position = "relative"
-    button.style.top = "-78px"
-    button.style.height = "50px"
-    button.style.width = "50px"
+    button.style.top = "-50px"
+    button.style.height = "30px"
+    button.style.width = "30px"
     button.style.left = "100px"
     button.style.borderRadius = "5px"
     button.innerHTML = "-"
     p.innerHTML = input.value
     p.style.position = "relative"
-    p.style.left = "-120px"
-    p.style.fontSize = "50px"
+    p.style.left = "-100px"
+    p.style.fontSize = "32px"
     button.onclick = function () {
         p.style.display = "none"
         button.style.display = "none"
     }
 
-    document.getElementById("item").append(p, button)
-
+    document.getElementById("items").append(p, button)
+    if (input.value == "") {
+        button.style.display = "none"
+    }
 }
 
 var slideIndex = 1;
