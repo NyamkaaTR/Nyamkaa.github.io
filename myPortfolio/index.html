@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/2f640925b6.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light text-uppercase font-weight-bold">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="show-menu">
+                    <h1 style="font-family: 'Dancing Script', cursive; color:white;">Nyamkaa TR</h1>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Нүүр <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Тухай</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Хийсэн ажил</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ul">Надтай холбогдох</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header class="text-uppercase" id="home">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-12">
+                        <p><span>NYAMKAA</span> TR</p>
+                    </div>
+                    <div class="col-xl-7 col-lg-12">
+                    </div>
+                </div>
+        </header>
+        
+        <div class="about-us">
+            <div class="container">
+
+                    <h2 class="text-uppercase" id="about">Миний <span>тухай</span></h2>
+                <div class="row">
+                    <div class="col-lg-7 col-12 d-flex align-items-center">
+                        <p style="font-size: 25px; color: mediumaquamarine">2019 оноос "Программ хангамж"-р сурч эхэлсэн. Багаар ажиллах чадвар сайтай</p>
+                    </div>
+                    <div class="col-lg-5 col-12">
+                        <div class="blue-shadow"></div>
+                        <img src="imgs/about-us.jpg" style=" height:400px; width:400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="services text-center">
+            <div class="container">
+                <h2 class="text-uppercase" id="services">Хийсэн <span>ажлууд</span></h2>
+                <p></p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-xs-12 active">
+                        <div class="stopwatch">
+                            <i class="fas fa-stopwatch fa-5x"></i>
+                            <h1><b>Stopwatch</b></h1>
+                            <div id="div1">00:00:00</div>
+                            <div id="div2">
+                                <button onclick="start()" class="button2" id="button()">Start</button>
+                                <button onclick="reset()" class="button2">Reset</button>
+                                <button onclick="lap()" class="button2" id="lap">Lap</button>
+                            </div>
+                            <div id="div4"> </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12 ">
+                        <div class="calculator">
+                            <i class="fas fa-calculator fa-5x"></i>
+                            <h1><b>Calculator</b></h1>
+                            <table>
+                                <tr>
+                                    <input id="myInput" disabled />
+                                    <button class="button4" onclick="C()">C</button>
+                                </tr>
+                                <tr>
+                                    <td><button class="button5" onclick="insert(7)">7</button></td>
+                                    <td><button class="button5" onclick="insert(8)">8</button></td>
+                                    <td><button class="button5" onclick="insert(9)">9</button></td>
+                                    <td><button class="button5" onclick="insert('*')">*</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button5" onclick="insert(4)">4</button></td>
+                                    <td><button class="button5" onclick="insert(5)">5</button></td>
+                                    <td><button class="button5" onclick="insert(6)">6</button></td>
+                                    <td><button class="button5" onclick="insert('+')">+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button5" onclick="insert(1)">1</button></td>
+                                    <td><button class="button5" onclick="insert(2)">2</button></td>
+                                    <td><button class="button5" onclick="insert(3)">3</button></td>
+                                    <td><button class="button5" onclick="insert('/')">/</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button5" onclick="insert('.')">.</button></td>
+                                    <td><button class="button5" onclick="insert(0)">0</button></td>
+                                    <td><button class="button5" onclick="insert('-')">-</button></td>
+                                    <td><button class="button5" onclick="equal('=')">=</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="todo">
+                            <i class="fas fa-list fa-5x"></i>
+                            <h1><b>Todo List</b></h1>
+                            <div id="item">
+                                <input type="text" id="input">
+                                <button id="button" onclick="click2()">+</button>
+                            </div>
+                            <div class="items" id="items">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="settimer">
+                            <i class="fas fa-clock fa-5x"></i>
+                            <h1><b>Set timer</b></h1>
+
+                            <div class="div3" id="div3">
+                                <input class="input1" id="input1" type="number" />
+                                <span style="">seconds</span>
+                                <button class="button3" onclick="btn()" id="btn">Set timer</button>
+                            </div>
+                            <div id="display1">00:00:00</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="login">
+                            <i class="fas fa-sign-in-alt fa-5x"></i>
+                            <h1><b>Login</b></h1> <p>Username</p> <input type="text" name="username" id="username" /> <p>Password</p> <input type="password" name="password" id="password" />
+                            <button class="button1" onclick="click1()">Login</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="slider">
+                            <i class="fas fa-sliders-h fa-5x"></i>
+                            <h1><b>Slider</b></h1>
+                            <div class="slide">
+
+                                <div class="mySlides">
+                                    <img src="imgs/z1.jpg">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="imgs/z2.jpg">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="imgs/z3.jpg">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="imgs/z4.jpg">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="imgs/z5.jpg">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="imgs/z6.png">
+                                </div>
+                                <a class="prev" onclick="cursor(-1)">&#10094;</a>
+                                <a class="next" onclick="cursor(1)">&#10095;</a>
+                            </div>
+                            <div style="text-align:center">
+                                <span class="dot" onclick="dooot(1)"></span>
+                                <span class="dot" onclick="dooot(2)"></span>
+                                <span class="dot" onclick="dooot(3)"></span>
+                                <span class="dot" onclick="dooot(4)"></span>
+                                <span class="dot" onclick="dooot(5)"></span>
+                                <span class="dot" onclick="dooot(6)"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12 ">
+                        <div class="counter">
+                            <i class="fas fa-sort-numeric-up-alt fa-5x"></i>
+                            <h1><b>Counter</b></h1>
+                            <div class="counter1">
+                                <div id="too">0</div>
+                                <button onclick="btn2()" class="button6">MINUS</button>
+                                <button onclick="btn1()" class="button6">PLUS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12 ">
+                        <div class="back">
+                            <i class="fas fa-tint fa-5x"></i>
+                            <h3><b>BackgroundColor changer</b></h3>
+                            <button onclick="change()" style="margin-top:-47px; background-color:red; font-size:25px;"> Change color!</button>
+                            <div class="ground" id="ground"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12 ">
+                        <div class="string">
+                            <i class="fas fa-random fa-5x"></i>
+                            <h1><b>RSG</b></h1>
+                            <button onclick="start1()" class="button7">START!</button>
+                            <div id="string"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12 ">
+                        <div class="slideshow">
+                            <i class="fab fa-slideshare fa-5x"></i>
+                            <h1><b>Slideshow</b></h1>
+                            <img id="aaa" src="imgs/billie1.jpg" />
+                            <button id="button1" onclick="click3()">Button</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <footer>
+            <div class="main-part">
+                <div class="container">
+                    <div class="d-flex justify-content-between text-uppercase">
+                        <div><img style="position:relative; left:-10px; width:400px; height:100px;"src="imgs/logo.png"/></div>
+                        <ul id="ul">
+                            <li><a href="https://www.facebook.com/nyamkaa.tr"><i class="fab fa-facebook-f fa-5x"></i></a></li>
+                            <li><a href="https://twitter.com/LyricsMongolia"><i class="fab fa-twitter fa-5x"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/%D0%B4%D1%83%D1%83-%D0%BE%D1%80%D1%87%D1%83%D1%83%D0%BB%D0%B3%D0%B0-5344101b4/ "><i class="fab fa-linkedin-in fa-5x"></i></a></li>
+                            <li><a href="https://www.instagram.com/nyamkaatrrr/"><i class="fab fa-instagram fa-5x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
