@@ -82,11 +82,24 @@ function start() {
     if (Id == 0) {
         Id = setInterval(stopwatch, 10)
     }
-    else {
+    if (document.getElementById('btn').style.display = "block") {
+        document.getElementById('btn').style.display = "none";
+        document.getElementById('btn1').style.display = "block";
+    }
+}
+start();
+
+function btn3() {
+    if (Id != 0) {
         clearInterval(Id)
         Id = 0
     }
+    if(document.getElementById('btn').style.display = "none") {
+        document.getElementById('btn').style.display = "block";
+        document.getElementById('btn1').style.display = "none";
+    }
 }
+btn3();
 
 
 function reset() {
@@ -98,6 +111,7 @@ function reset() {
     Id = 0;
     document.getElementById('div4').innerHTML = "";
 }
+
 
 function lap() {
     var p = document.createElement('p')
@@ -118,24 +132,40 @@ function stopwatch() {
     }
 }
 
-var Input = document.getElementById("input1")
+let Input = document.getElementById('input1')
+let p1 = document.getElementById('display1')
 
 function btn() {
     run(Input.value)
 }
 function run(time) {
-    var m = Math.floor(time / 60)
-    var h = Math.floor(m / 60)
-    var s = (time % 60)
-    time--;
-    var timeoutId = setTimeout(run, 1000, time)//recursive function, recursion
-    if (time <= 0) {
-        clearTimeout(timeoutId)
+    if (time < 60) {
+        p1.innerHTML = "00:" + "00:" + time
     }
-    document.getElementById('display1').innerHTML = (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s)
+    else if (time >= 60) {
+        let min = Math.floor((time % 3600) / 60)
+        let sec = Math.floor(time % 60)
+        let hrs = Math.floor(time / 3600)
+
+        if (sec < 10) {
+            p1.innerHTML = hrs + ":" + min + ":" + "0" + sec
+        }
+        else p1.innerHTML = hrs + ":" + min + ":" + sec
+        if (hrs == 0) {
+            min--
+        }
+        if (min == 0) {
+            sec--
+        }
+
+    }
+
+    time--;
+    if (time >= 0) {
+        setTimeout(run, 1000, time)
+    }
+
 }
-
-
 var input = document.getElementById('input')
 function click2() {
     var p = document.createElement("p")
@@ -213,9 +243,9 @@ function change() {
 
 
 function start1() {
-    var strings = ['abc', 'def','ghi','jkl', 'mno', 'pqr', 'stu', 'vwx', 'yz', '123', '456', '789', '010']
+    var strings = ['Би МТ колонк-с бензин авлаа.', 'Болд Монголд ирээгүй удаж байна.', 'Өнөөдөр цас орно гэсэн боловч ороогүй.']
     var random = Math.floor(Math.random() * strings.length);
-    var x = (strings[random]).toUpperCase()
+    var x = (strings[random])
     document.getElementById("string").innerHTML = (x);
 }
 
